@@ -11,7 +11,7 @@
       referrerpolicy="no-referrer"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>NodeJS Test</title>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/footer.css" />
@@ -29,7 +29,58 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <section id="models-table">
+        <h2>Vehicles</h2>
+        <div id="find-vehicles-btns">
+          <p>Find vehicles in:</p>
+          <button class="find-btns" id="findLT">LT</button>
+          <button class="find-btns" id="findLV">LV</button>
+          <button class="find-btns" id="findEST">EST</button>
+          <button class="find-btns" id="getAll">Get all</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Number plate</th>
+              <th>Country location</th>
+            </tr>
+          </thead>
+          <tbody id="vehicles-output"></tbody>
+        </table>
+      </section>
+
+      <section id="posting-new-vehicle">
+        <h2>Add new vehicle</h2>
+        <form id="post-vehicle-form">
+          <label for="selectModelName">Model name</label>
+          <select name="models-select" id="selectModelName"></select>
+          <br />
+          <br />
+
+          <label for="vehicleNumberPlate">Vehicle number plate</label>
+          <input
+            type="text"
+            id="vehicleNumberPlate"
+            placeholder="Enter new country number plate"
+          />
+          <br />
+          <br />
+
+          <label for="vehicleCountryLocation">Vehicle country location</label>
+          <input
+            type="text"
+            id="vehicleCountryLocation"
+            placeholder="Enter new country location"
+          />
+          <br />
+          <br />
+
+          <input class="btn" type="submit" value="Add new vehicle" />
+        </form>
+      </section>
+    </main>
 
     <footer>
       <div>
