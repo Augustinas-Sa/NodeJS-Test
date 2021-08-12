@@ -97,3 +97,61 @@ h2 {
 .btn:hover {
   background-color: orangered;
 }
+
+.find-btns {
+  height: 20px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+.find-btns:hover {
+  background-color: orangered;
+}
+
+#find-vehicles-btns {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+p {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.ltColors {
+  background: rgb(255, 240, 8);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 240, 8, 1) 0%,
+    rgba(34, 224, 26, 1) 50%,
+    rgba(255, 18, 2, 1) 100%
+  );
+}
+
+.lvColors {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.estColors {
+  color: white;
+  background: rgb(0, 202, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 202, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
