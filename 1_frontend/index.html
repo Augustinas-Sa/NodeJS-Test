@@ -3,14 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NodeJS Test</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/footer.css" />
+    <!-- CUSTOM JS -->
+    <script defer src="./scripts/script.js"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div><i class="fas fa-truck-moving"></i></div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Models</a></li>
+          <li><a href="./vehicles.html">Vehicles</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main></main>
+    <main>
+      <section id="models-table">
+        <h2>Models</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Hour/Price</th>
+            </tr>
+          </thead>
+          <tbody id="models-output"></tbody>
+        </table>
+      </section>
 
-    <footer></footer>
+      <section id="posting-new-model">
+        <h2>Add new model</h2>
+        <form id="post-model">
+          <label for="modelName">Model name</label>
+          <input
+            type="text"
+            id="modelName"
+            placeholder="Enter new model name"
+          />
+          <br />
+          <br />
+
+          <label for="modelHourPrice">Hour/Price</label>
+          <input
+            type="text"
+            id="modelHourPrice"
+            placeholder="Enter new hour/price"
+          />
+          <br />
+          <br />
+
+          <input class="btn" type="submit" value="Add new model" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p id="date"></p>
+      </div>
+    </footer>
   </body>
 </html>
