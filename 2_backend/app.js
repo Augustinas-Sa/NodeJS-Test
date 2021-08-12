@@ -38,6 +38,40 @@ app.get('/api/models', async (req, res) => {
   res.json(models);
 });
 
+// GET       /api/vehicles               (paduos visus automobilius, kur model_id taps model name ir hour_price [su join padaryti]). Čia, automobilių kaina grąžinama su PVM;
+app.get('/api/vehicles', async (req, res) => {
+  const vehicles = await Vehicle.find({});
+
+  res.json(vehicles);
+});
+
+// GET       /api/vehicles/:id            (paduos visus automobilius, kurie yra Lietuvoje; identiškas duomenų formatas kaip /vehicles);
+app.get('/api/vehicles/lt', async (req, res) => {
+  let locations = req.params.country_location;
+
+  locations = await Vehicle.find({ country_location: 'LT' });
+
+  res.json(locations);
+});
+
+// GET       /api/vehicles/lv            (paduos visus automobilius, kurie yra Latvijoje; identiškas duomenų formatas kaip /vehicles);
+app.get('/api/vehicles/lv', async (req, res) => {
+  let locations = req.params.country_location;
+
+  locations = await Vehicle.find({ country_location: 'LV' });
+
+  res.json(locations);
+});
+
+// GET       /api/vehicles/ee            (paduos visus automobilius, kurie yra Estijoje; identiškas duomenų formatas kaip /vehicles);
+app.get('/api/vehicles/ee', async (req, res) => {
+  let locations = req.params.country_location;
+
+  locations = await Vehicle.find({ country_location: 'EST' });
+
+  res.json(locations);
+});
+
 // POST      /api/models                 (leis įrašyti naują modelį/markę: name: BMW X1, hour_price: 5.55, name: BMW X3, hour_price: 4.33);
 app.post('/api/models', (req, res) => {
   const model = new Model(req.body);
