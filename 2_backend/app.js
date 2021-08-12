@@ -31,6 +31,13 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
+// GET       /api/models                 (paduos visus modelius - auto kaina be PVM);
+app.get('/api/models', async (req, res) => {
+  const models = await Model.find({});
+
+  res.json(models);
+});
+
 // POST      /api/models                 (leis įrašyti naują modelį/markę: name: BMW X1, hour_price: 5.55, name: BMW X3, hour_price: 4.33);
 app.post('/api/models', (req, res) => {
   const model = new Model(req.body);
