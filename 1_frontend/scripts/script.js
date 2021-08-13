@@ -1,6 +1,6 @@
 // GET Models
 // API
-const MODELS_API = 'http://localhost:5000/api/models';
+const MODELS_API = 'https://nodejs-exam-app.herokuapp.com/api/models';
 
 // Variables
 const modelsOutputElement = document.querySelector('#models-output');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', getModels);
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // POST Models
 // API
-// const MODELS_API = 'http://localhost:5000/api/models';
+// const MODELS_API = 'https://nodejs-exam-app.herokuapp.com/api/models';
 
 // Variables
 const postModelFormElement = document.querySelector('#post-model');
