@@ -155,3 +155,23 @@ p {
     rgba(255, 255, 255, 1) 100%
   );
 }
+
+.adding-vehicle-name {
+  margin-top: 30px;
+}
+
+#vehicleNumberPlate {
+  width: 221px;
+}
+
+#vehicleCountryLocation {
+  width: 200px;
+}
+
+#modelHourPrice {
+  width: 155px;
+}
+
+#selectModelName {
+  width: 100px;
+}
