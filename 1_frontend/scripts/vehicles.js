@@ -1,6 +1,6 @@
 // GET Vehicles
 // API
-const VEHICLES_API = 'http://localhost:5000/api/vehicles';
+const VEHICLES_API = 'https://nodejs-exam-app.herokuapp.com/api/vehicles';
 
 // Variables
 const vehiclesOutputElement = document.querySelector('#vehicles-output');
@@ -60,7 +60,7 @@ getAllBtnElement.addEventListener('click', getAll, getVehicles());
 
 // GET Vehicle in LT ---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // API
-const FINDLT_API = 'http://localhost:5000/api/vehicles/lt';
+const FINDLT_API = 'https://nodejs-exam-app.herokuapp.com/api/vehicles/lt';
 // Variables
 const findLTBtnElement = document.querySelector('#findLT');
 
@@ -93,7 +93,7 @@ findLTBtnElement.addEventListener('click', findLt, getVehicles());
 
 // GET Vehicle in LV ---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // API
-const FINDLV_API = 'http://localhost:5000/api/vehicles/lv';
+const FINDLV_API = 'https://nodejs-exam-app.herokuapp.com/api/vehicles/lv';
 // Variables
 const findLVBtnElement = document.querySelector('#findLV');
 
@@ -126,7 +126,7 @@ findLVBtnElement.addEventListener('click', findLv, getVehicles());
 
 // GET Vehicle in EST --------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // API
-const FINDEST_API = 'http://localhost:5000/api/vehicles/ee';
+const FINDEST_API = 'https://nodejs-exam-app.herokuapp.com/api/vehicles/ee';
 // Variables
 const findESTBtnElement = document.querySelector('#findEST');
 
@@ -159,7 +159,7 @@ findESTBtnElement.addEventListener('click', findEst, getVehicles());
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // POST Vehicles
 // API
-const MODELS_API = 'http://localhost:5000/api/models';
+const MODELS_API = 'https://nodejs-exam-app.herokuapp.com/api/models';
 
 // Variables
 const modelsSelectElement = document.querySelector('#selectModelName');
@@ -221,7 +221,7 @@ const postVehicle = (e) => {
   })
     .then((response) => response.json())
     .then((data) => alert(data.message));
-    console.log(changeGetModelId(e));
+  console.log(changeGetModelId(e));
 };
 
 // Events
