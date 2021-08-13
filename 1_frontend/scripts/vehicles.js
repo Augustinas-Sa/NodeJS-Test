@@ -177,7 +177,7 @@ const getModelsSelectNames = async () => {
         output += `
          <option value="${model._id}">${model.name}</option>
           `;
-        console.log(output);
+
         return output;
       }, '');
 
@@ -191,7 +191,10 @@ const getModelsSelectNames = async () => {
   }
 };
 
-const changeGetModelId = (e) => (modelIdForPostMethod = e.target.value);
+const changeGetModelId = (e) => {
+  modelIdForPostMethod = e.target.value;
+  console.log(modelIdForPostMethod);
+};
 
 const postVehicle = (e) => {
   e.preventDefault();
@@ -218,6 +221,7 @@ const postVehicle = (e) => {
   })
     .then((response) => response.json())
     .then((data) => alert(data.message));
+    console.log(changeGetModelId(e));
 };
 
 // Events
